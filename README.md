@@ -17,23 +17,22 @@ unzip ~/.buildozer/android/platform/android-sdk/commandlinetools-linux-6514223_l
 buildozer init
 ```
 3. Open `buildozer.spec` and change following:
-Set the app name and package name:
-```
-#(str) Title of your application    
-title = My Application (name of your applications)
-#(str) Package name    
-package.name = myapp (package name)
-```
-Remove `#` symbol:
-```
-#(str) Android logcat filters to use    
-#android.logcat_filters = *:S python:D
-```
-Add `kivimd` to requirements:
-
-
-
-
+    * Set the app name and package name:
+    ```
+    #(str) Title of your application    
+    title = My Application (name of your applications)
+    #(str) Package name    
+    package.name = myapp (package name)
+    ```
+    * Remove `#` symbol:
+    ```
+    #(str) Android logcat filters to use    
+    #android.logcat_filters = *:S python:D
+    ```
+    * Add `kivimd` to requirements:
+    ```
+    requirements = python3,kivy,kivymd
+    ```
 3. Export debug APK.
 ```
 buildozer -v android debug
