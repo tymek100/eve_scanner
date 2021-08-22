@@ -37,4 +37,6 @@ class MainApp(MDApp):
         return sm
 
 if __name__ == '__main__':
+    #main
     MainApp().run()
+
