@@ -17,6 +17,7 @@ unzip ~/.buildozer/android/platform/android-sdk/commandlinetools-linux-6514223_l
 buildozer init
 ```
 3. Open `buildozer.spec` and change following:
+
     * Set the app name and package name:
     ```
     #(str) Title of your application    
