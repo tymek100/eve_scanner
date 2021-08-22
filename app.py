@@ -9,7 +9,15 @@ Builder.load_file('layout.kv')
 
 
 class MainScreen(Screen):
-    pass
+
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        self.startButton = MyButton(text="PRESS ME", pos_hint= {"center_x": .5, "center_y": .5})
+        self.startButton.on_release = self.switch_screen
+        self.add_widget(self.startButton)
+
+    def switch_screen(self, *args):
+        self.manager.current = 'second'
 
 
 class SecondScreen(Screen):
@@ -33,10 +41,9 @@ class MainApp(MDApp):
     def build(self):
         sm = ScreenManager()
         sm.add_widget(MainScreen(name='main'))
-        sm.add_widget(SecondScreen(name='setcond'))
+        sm.add_widget(SecondScreen(name='second'))
         return sm
 
 if __name__ == '__main__':
     #main
     MainApp().run()
-
