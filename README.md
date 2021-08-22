@@ -24,14 +24,14 @@ buildozer init
     #(str) Package name    
     package.name = myapp (package name)
     ```
-    * Remove `#` symbol:
+    * Set logcat filters for `python`:
     ```
     #(str) Android logcat filters to use    
-    #android.logcat_filters = *:S python:D
+    android.logcat_filters = *:S python:D
     ```
-    * Add `kivimd` to requirements:
+    * Change `requirements` as follows:
     ```
-    requirements = python3,kivy,kivymd
+    requirements = python3,kivy==2.0.0,kivymd==0.104.1
     ```
 3. Export debug APK.
 ```
