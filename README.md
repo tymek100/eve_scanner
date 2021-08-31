@@ -21,9 +21,9 @@ buildozer init
     * Set the app name and package name:
     ```
     #(str) Title of your application    
-    title = My Application (name of your applications)
+    title = Evenement Scanner
     #(str) Package name    
-    package.name = myapp (package name)
+    package.name = eve_scanner
     ```
     * Set logcat filters for `python`:
     ```
